@@ -1,0 +1,5 @@
+- Need to implement proto.CarrierServiceServicer in service.CarrierService
+- How to write server side can be found at https://grpc.io/docs/tutorials/basic/python.html
+- Add config file for RPC port. 
+- Fix Dockerfile and make it buildable and runable at any port (defined in config)
+- Add "build-dev" and "run-dev" rules to Makefile
