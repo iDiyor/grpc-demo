@@ -1,0 +1,8 @@
+syntax="proto3";
+package carrier;
+
+import "carrier.proto";
+
+service CarrierService {
+    rpc CreateCarrier(CreateCarrierRequest) returns (Carrier);
+}

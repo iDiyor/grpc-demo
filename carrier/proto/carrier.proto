@@ -1,0 +1,14 @@
+syntax="proto3";
+package carrier;
+
+message Carrier {
+    string id = 1;
+    string name = 2;
+    string phone_number = 3;
+    string timestamp = 4;
+}
+
+message CreateCarrierRequest {
+    string name = 1;
+    string phone_number = 2;
+}

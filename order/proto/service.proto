@@ -1,0 +1,12 @@
+syntax="proto3";
+package order;
+
+import "order.proto";
+import "empty.proto";
+
+service OrderService {
+    rpc CreateOrder(CreateOrderRequest) returns (Order);
+    rpc GetOrder(GetOrderRequest) returns (Order);
+    rpc UpdateOrder(Order) returns (EmptyResponse);
+    rpc DeleteOrder(DeleteOrderRequest) returns (DeleteOrderResponse);
+}

@@ -1,0 +1,34 @@
+syntax="proto3";
+package order;
+
+message Order {
+    string id = 1;
+    string carrier_id = 2;
+    string carrier_name = 3;
+    string carrier_contact = 4;
+    string pickup_address = 5;
+    string delivery_address = 6;
+    int32 price = 7;
+    string timestamp = 8;
+}
+
+message CreateOrderRequest {
+    string carrier_id = 1;
+    string carrier_name = 2;
+    string carrier_contact = 3;
+    string pickup_address = 4;
+    string delivery_address = 5;
+    int32 price = 6;
+}
+
+message GetOrderRequest {
+    string order_id = 1;
+}
+
+message DeleteOrderRequest {
+    string order_id = 1;
+}
+
+message DeleteOrderResponse {
+    string someeventfields = 1;
+}
