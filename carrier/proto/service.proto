@@ -2,7 +2,11 @@ syntax="proto3";
 package carrier;
 
 import "carrier.proto";
+import "empty.proto";
 
 service CarrierService {
     rpc CreateCarrier(CreateCarrierRequest) returns (Carrier);
+    rpc GetCarrier(GetCarrierRequest) returns (Carrier);
+    rpc UpdateCarrier(Carrier) returns (EmptyResponse);
+    rpc DeleteCarrier(DeleteCarrierRequest) returns (EmptyResponse);
 }

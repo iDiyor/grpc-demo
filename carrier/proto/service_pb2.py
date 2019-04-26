@@ -14,6 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 import carrier_pb2 as carrier__pb2
+import empty_pb2 as empty__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='carrier',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rservice.proto\x12\x07\x63\x61rrier\x1a\rcarrier.proto2R\n\x0e\x43\x61rrierService\x12@\n\rCreateCarrier\x12\x1d.carrier.CreateCarrierRequest\x1a\x10.carrier.Carrierb\x06proto3')
+  serialized_pb=_b('\n\rservice.proto\x12\x07\x63\x61rrier\x1a\rcarrier.proto\x1a\x0b\x65mpty.proto2\x91\x02\n\x0e\x43\x61rrierService\x12@\n\rCreateCarrier\x12\x1d.carrier.CreateCarrierRequest\x1a\x10.carrier.Carrier\x12:\n\nGetCarrier\x12\x1a.carrier.GetCarrierRequest\x1a\x10.carrier.Carrier\x12\x39\n\rUpdateCarrier\x12\x10.carrier.Carrier\x1a\x16.carrier.EmptyResponse\x12\x46\n\rDeleteCarrier\x12\x1d.carrier.DeleteCarrierRequest\x1a\x16.carrier.EmptyResponseb\x06proto3')
   ,
-  dependencies=[carrier__pb2.DESCRIPTOR,])
+  dependencies=[carrier__pb2.DESCRIPTOR,empty__pb2.DESCRIPTOR,])
 
 
 
@@ -37,8 +38,8 @@ _CARRIERSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=41,
-  serialized_end=123,
+  serialized_start=55,
+  serialized_end=328,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateCarrier',
@@ -47,6 +48,33 @@ _CARRIERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=carrier__pb2._CREATECARRIERREQUEST,
     output_type=carrier__pb2._CARRIER,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetCarrier',
+    full_name='carrier.CarrierService.GetCarrier',
+    index=1,
+    containing_service=None,
+    input_type=carrier__pb2._GETCARRIERREQUEST,
+    output_type=carrier__pb2._CARRIER,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='UpdateCarrier',
+    full_name='carrier.CarrierService.UpdateCarrier',
+    index=2,
+    containing_service=None,
+    input_type=carrier__pb2._CARRIER,
+    output_type=empty__pb2._EMPTYRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='DeleteCarrier',
+    full_name='carrier.CarrierService.DeleteCarrier',
+    index=3,
+    containing_service=None,
+    input_type=carrier__pb2._DELETECARRIERREQUEST,
+    output_type=empty__pb2._EMPTYRESPONSE,
     serialized_options=None,
   ),
 ])

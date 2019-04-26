@@ -12,3 +12,11 @@ message CreateCarrierRequest {
     string name = 1;
     string phone_number = 2;
 }
+
+message GetCarrierRequest {
+    string carrier_id = 1;
+}
+
+message DeleteCarrierRequest {
+    string carrier_id = 1;
+}

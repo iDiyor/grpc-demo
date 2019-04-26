@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='carrier',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rcarrier.proto\x12\x07\x63\x61rrier\"L\n\x07\x43\x61rrier\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x14\n\x0cphone_number\x18\x03 \x01(\t\x12\x11\n\ttimestamp\x18\x04 \x01(\t\":\n\x14\x43reateCarrierRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0cphone_number\x18\x02 \x01(\tb\x06proto3')
+  serialized_pb=_b('\n\rcarrier.proto\x12\x07\x63\x61rrier\"L\n\x07\x43\x61rrier\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x14\n\x0cphone_number\x18\x03 \x01(\t\x12\x11\n\ttimestamp\x18\x04 \x01(\t\":\n\x14\x43reateCarrierRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0cphone_number\x18\x02 \x01(\t\"\'\n\x11GetCarrierRequest\x12\x12\n\ncarrier_id\x18\x01 \x01(\t\"*\n\x14\x44\x65leteCarrierRequest\x12\x12\n\ncarrier_id\x18\x01 \x01(\tb\x06proto3')
 )
 
 
@@ -115,8 +115,72 @@ _CREATECARRIERREQUEST = _descriptor.Descriptor(
   serialized_end=162,
 )
 
+
+_GETCARRIERREQUEST = _descriptor.Descriptor(
+  name='GetCarrierRequest',
+  full_name='carrier.GetCarrierRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='carrier_id', full_name='carrier.GetCarrierRequest.carrier_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=164,
+  serialized_end=203,
+)
+
+
+_DELETECARRIERREQUEST = _descriptor.Descriptor(
+  name='DeleteCarrierRequest',
+  full_name='carrier.DeleteCarrierRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='carrier_id', full_name='carrier.DeleteCarrierRequest.carrier_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=205,
+  serialized_end=247,
+)
+
 DESCRIPTOR.message_types_by_name['Carrier'] = _CARRIER
 DESCRIPTOR.message_types_by_name['CreateCarrierRequest'] = _CREATECARRIERREQUEST
+DESCRIPTOR.message_types_by_name['GetCarrierRequest'] = _GETCARRIERREQUEST
+DESCRIPTOR.message_types_by_name['DeleteCarrierRequest'] = _DELETECARRIERREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Carrier = _reflection.GeneratedProtocolMessageType('Carrier', (_message.Message,), dict(
@@ -132,6 +196,20 @@ CreateCarrierRequest = _reflection.GeneratedProtocolMessageType('CreateCarrierRe
   # @@protoc_insertion_point(class_scope:carrier.CreateCarrierRequest)
   ))
 _sym_db.RegisterMessage(CreateCarrierRequest)
+
+GetCarrierRequest = _reflection.GeneratedProtocolMessageType('GetCarrierRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETCARRIERREQUEST,
+  __module__ = 'carrier_pb2'
+  # @@protoc_insertion_point(class_scope:carrier.GetCarrierRequest)
+  ))
+_sym_db.RegisterMessage(GetCarrierRequest)
+
+DeleteCarrierRequest = _reflection.GeneratedProtocolMessageType('DeleteCarrierRequest', (_message.Message,), dict(
+  DESCRIPTOR = _DELETECARRIERREQUEST,
+  __module__ = 'carrier_pb2'
+  # @@protoc_insertion_point(class_scope:carrier.DeleteCarrierRequest)
+  ))
+_sym_db.RegisterMessage(DeleteCarrierRequest)
 
 
 # @@protoc_insertion_point(module_scope)
